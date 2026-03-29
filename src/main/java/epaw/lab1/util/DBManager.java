@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class DBManager implements AutoCloseable {
 
 	private Connection connection = null;
-	private static final String DB_FILE = "labf.db";
+	private static final String DB_FILE = "lab1.db";
 
 	public DBManager() throws Exception {
 		// SQLite connection
