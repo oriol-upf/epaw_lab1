@@ -33,7 +33,7 @@ Abans de començar, assegura't que tens instal·lat el següent programari:
 2.  **Dependències**: En lloc de descarregar fitxers `.jar` a mà i copiar-los a carpetes, simplement li dius a Maven: "necessito la llibreria de SQLite versió X". Maven la baixarà d'Internet automàticament i la posarà a punt per fer-la servir.
 3.  **Plugins**: Són funcionalitats extra. Per exemple, el plugin de **Jetty** que fem servir és el que permet que, amb una sola comanda (`mvn jetty:run`), s'aixequi un servidor web complet.
 
-- **`labf.db`**: El fitxer de la base de dades **SQLite**. No l'has d'editar a mà, ho farà el teu codi!
+- **`lab1.db`**: El fitxer de la base de dades **SQLite**. No l'has d'editar a mà, ho farà el teu codi!
 - **`DB.txt`**: Conté les sentències SQL per crear les taules inicials si la base de dades no existeix.
 - **`.vscode/`**: Configuració específica per a l'editor, incloent els **Snippets** de codi.
 
@@ -96,12 +96,27 @@ Per connectar-nos a la base de dades sense embolics, fem servir la classe `DBMan
 
 ### Quins avantatges té SQLite?
 A diferència de MySQL o Oracle, **SQLite** no és un servidor de base de dades, sinó una **base de dades de fitxer**.
-- **Zero Configuració**: No cal instal·lar ni configurar cap servidor extern. Tot el que necessites ja és dins del fitxer `labf.db`.
+- **Zero Configuració**: No cal instal·lar ni configurar cap servidor extern. Tot el que necessites ja és dins del fitxer `lab1.db`.
 - **Portabilitat**: Si canvies d'ordinador, només cal que t'emportis la carpeta del projecte i la teva base de dades anirà amb tu.
 - **Transaccional**: Tot i ser senzilla, compleix els estàndards profesionals (ACID), el que la fa perfecta per aprendre SQL.
 
+### 🔍 Com veure i editar les dades (Fàcil)
+Tot i que pots editar la base de dades mitjançant codi Java, de vegades voldràs veure les taules directament o afegir dades de prova ràpidament. Per això farem servir l'extensió **Database Client**:
+
+1.  Busca la icona del **Database Client** a la barra lateral de VS Code (un quadrat amb 4 punts).
+2.  Clica a **"New Connection" (+)** i tria **SQLite**.
+3.  A l'apartat **File**, tria el fitxer `lab1.db` del teu projecte.
+4.  Un cop connectat, fes **doble clic** sobre qualsevol taula per veure'n el contingut en una graella (com un Excel).
+5.  Pots afegir files noves directament des de la graella fent clic al botó **"+" (Insert)**.
+
+> [!TIP]
+> Si l'extensió et diu que no troba SQLite instal·lat al sistema:
+> - **Linux**: Executa `sudo apt install sqlite3`.
+> - **macOS**: Normalment ja ve instal·lat, però pots fer `brew install sqlite`.
+> - **Windows**: Descarrega el "sqlite-tools" de la web oficial [sqlite.org](https://www.sqlite.org/download.html) i afegeix-lo al PATH, o simplement reinstal·la l'extensió.
+
 ### Com s'inicialitza?
-Quan el teu codi fa `new DBManager()`, la classe busca el fitxer `labf.db`. Si no existeix, el crea i executa les instruccions que hi hagi a `DB.txt`. Pots afegir les teves taules allà mateix!
+Quan el teu codi fa `new DBManager()`, la classe busca el fitxer `lab1.db`. Si no existeix, el crea i executa les instruccions que hi hagi a `DB.txt`. Pots afegir les teves taules allà mateix!
 
 ### Exemple de consulta (SELECT)
 Fes servir un `PreparedStatement` per evitar atacs d'injecció SQL:
