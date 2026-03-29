@@ -274,8 +274,8 @@ El codi del meu company (el que ja estava a GitHub)
 L'objectiu d'aquest laboratori és que siguis capaç de crear una aplicació que no només llegeixi dades, sinó que també permeti interactuar a l'usuari. El flux complet que has d'aconseguir és:
 
 1.  **Llistar**: Mostrar la taula d'usuaris extreta de SQLite (aixó ja està fet a la plantilla).
-2.  **Interactuar**: Afegir un formulari HTML al final de la pàgina per crear-ne de nous (ho has de fer al Servlet).
-3.  **Processar**: Rebre les dades al mètode `doPost`, guardar-les a la base de dades i redirigir correctament.
+2.  **Interactuar**: Afegir un formulari HTML al final de la pàgina per crear-ne de nous (ho has de fer al Servlet dins del mètode `doGet`).
+3.  **Processar**: Rebre les dades al mètode `doPost`, guardar-les a la base de dades i redirigir correctament la petició.
 4.  **Decorar**: Fer servir CSS bàsic per millorar l'aparença de la taula i el formulari.
 
 
