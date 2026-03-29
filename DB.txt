@@ -1,0 +1,7 @@
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR(20) NOT NULL,
+  description VARCHAR(255) NOT NULL
+);
+
+INSERT INTO users (name, description) VALUES ('Oriol', 'Professor');

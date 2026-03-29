@@ -1,0 +1,11 @@
+{
+    "java.autobuild.enabled": true,
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.import.maven.offline.enabled": false,
+    "java.project.importOnFirstTimeStartup": "automatic",
+    "files.exclude": {
+        "jsp/": true,
+        "target/": true
+    }
+}
