@@ -22,12 +22,6 @@ buildNumber.properties
 *.iml
 *.ipr
 
-# VS Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/html.code-snippets
-
 # Arxius del Professor (Ocults a GitHub)
 src/main/java/epaw/lab1/Solucio.java
 # MacOS
