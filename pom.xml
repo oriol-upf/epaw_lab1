@@ -45,6 +45,13 @@
             <artifactId>sqlite-jdbc</artifactId>
             <version>3.51.2.0</version>
         </dependency>
+
+        <!-- Apache Commons Codec -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.16.1</version>
+        </dependency>
     </dependencies>
 
     <build>

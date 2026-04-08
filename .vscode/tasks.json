@@ -4,7 +4,10 @@
         {
             "label": "🚀 Obre al navegador",
             "type": "shell",
-            "command": "java -cp target/classes epaw.lab1.util.OpenBrowser \"${file}\"",
+            "command": "java -cp target/classes epaw.lab1.util.OpenBrowser '${file}'",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true
